@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Glass Garden | Living art and botanical sculptures</title>
+<meta name="description" content="Handcrafted terrariums: miniature forests, fairy gardens and succulent landscapes in glass. Order on WhatsApp and get it delivered.">
+<meta property="og:title" content="The Glass Garden">
+<meta property="og:description" content="Living art and botanical sculptures. Handcrafted terrariums, delivered to your door.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1d4a2b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parch:#f5f0e1;
+  --parch-2:#ebe3cd;
+  --forest:#1d4a2b;
+  --forest-deep:#13321e;
+  --leaf:#4f8a3c;
+  --sage:#dfe9c8;
+  --bark:#6e4b2a;
+  --gold:#b58a3a;
+  --ink:#25301f;
+  --muted:#575f48;
+  --line:#d8cfb2;
+  --wa:#1fa855;
+  --wa-dark:#17813f;
+  --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body:"Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --script:"Caveat", "Segoe Script", cursive;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .15 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--body);background:var(--parch) var(--grain);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto;position:relative}
+
+/* shared icon */
+.ico{flex:none;width:52px;height:52px;border-radius:50%;background:var(--sage);color:var(--forest);display:grid;place-items:center}
+.ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sprig{position:absolute;color:var(--leaf);pointer-events:none}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:20;background:rgba(245,240,225,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.5rem;text-decoration:none;color:var(--forest);letter-spacing:.01em}
+.brand svg{width:30px;height:30px;fill:none;stroke:var(--forest);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav.links{display:flex;gap:26px;font-size:.95rem;font-weight:600}
+nav.links a{text-decoration:none;color:var(--muted)}
+nav.links a:hover{color:var(--forest)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 .98rem var(--body);padding:12px 22px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:background .2s,color .2s}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark)}
+.btn-ghost{background:transparent;color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}
+.btn-ghost:hover{background:var(--forest);color:#fff}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+
+/* Photo slots */
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--forest);font-size:.85rem;font-weight:600;background:linear-gradient(170deg,#e3ecd0,#b9cf9e)}
+.ph svg{width:60px;height:60px;opacity:.7}
+
+/* Hero */
+.hero{overflow:hidden;position:relative;padding-block:64px 80px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.8rem,6vw,4.9rem);line-height:1;letter-spacing:-.01em;color:var(--forest);margin-bottom:22px}
+.hero .lead{font-size:1.15rem;color:var(--muted);max-width:30em;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.signoff{font-family:var(--script);font-size:2rem;color:var(--bark);margin-top:26px;line-height:1.1}
+.frame{position:relative;padding:12px;max-width:430px;width:100%;margin-inline:auto}
+.frame::before{content:"";position:absolute;inset:0;border:1.5px solid var(--gold);border-radius:999px 999px 30px 30px;pointer-events:none}
+.hero-photo{position:relative;aspect-ratio:3/4;border-radius:999px 999px 20px 20px;overflow:hidden;background:var(--sage)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 82%}
+.hero .sprig.a{width:170px;left:-40px;bottom:-30px;opacity:.16;transform:rotate(28deg)}
+.hero .sprig.b{width:130px;right:6%;top:-24px;opacity:.14;transform:rotate(190deg)}
+
+/* Sections */
+section{padding-block:88px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(2.1rem,4.4vw,3.3rem);line-height:1.05;letter-spacing:-.005em;color:var(--forest);margin-bottom:16px}
+.sub{color:var(--muted);max-width:34em}
+
+/* About / services */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.about-photo{position:relative;aspect-ratio:2/3;border-radius:26px 26px 26px 120px;overflow:hidden;background:var(--sage);max-width:420px;width:100%}
+.about-photo img,.explain-photo img{width:100%;height:100%;object-fit:cover}
+.about p.intro{margin-bottom:30px;max-width:34em}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}
+.svc{display:flex;gap:16px;align-items:flex-start}
+.svc h3,.pt h3{font-family:var(--display);font-weight:700;font-size:1.35rem;line-height:1.15;color:var(--forest);margin-bottom:4px}
+.svc p{font-size:.96rem;color:var(--muted)}
+
+/* Products */
+.shop{background:var(--parch-2) var(--grain)}
+.shop-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px;margin-bottom:38px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:700 .92rem var(--body);padding:9px 18px;border-radius:999px;border:1.5px solid var(--forest);background:transparent;color:var(--forest);cursor:pointer;transition:background .2s,color .2s}
+.chip:hover{background:rgba(29,74,43,.08)}
+.chip[aria-pressed="true"]{background:var(--forest);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:44px 28px}
+.item{display:flex;flex-direction:column}
+.item[hidden]{display:none}
+.photo{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:#dcd3b8;isolation:isolate}
+.photo::before{content:"";position:absolute;inset:-12%;background:var(--bg) center/cover;filter:blur(24px) saturate(1.1);opacity:.55;z-index:-1}
+.photo img{width:100%;height:100%;object-fit:contain}
+.photo.zoom{cursor:zoom-in}
+.item h3{font-family:var(--display);font-weight:700;font-size:1.42rem;line-height:1.15;color:var(--forest);margin:18px 0 8px}
+.item p{font-size:.95rem;color:var(--muted);flex:1}
+.item .row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.price{font-weight:700;color:var(--bark);font-size:.95rem}
+.item .btn{padding:10px 18px;font-size:.92rem}
+
+/* Closed terrarium */
+.explain-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.explain-photo{position:relative;aspect-ratio:3/4;border-radius:200px 200px 26px 26px;overflow:hidden;background:var(--sage);max-width:430px;width:100%;margin-inline:auto}
+.pts{display:grid;gap:0;margin-top:30px}
+.pt{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-top:1px solid var(--line)}
+.pt:last-child{border-bottom:1px solid var(--line)}
+.pt p{font-size:.97rem;color:var(--muted)}
+
+/* Care */
+.care{background:var(--forest) var(--grain);color:#e6edd6;overflow:hidden;position:relative}
+.care h2{color:#f4efd9}
+.care .sub{color:#c3d3b3}
+.care .pts{grid-template-columns:1fr 1fr;column-gap:56px;margin-top:40px}
+.care .pt{border-color:rgba(223,233,200,.22)}
+.care .pt:last-child{border-bottom:0}
+.care .pt:nth-last-child(2){border-bottom:0}
+.care .pt h3{color:#f4efd9}
+.care .pt p{color:#c9d8ba}
+.care .sprig{color:#8cc26b;opacity:.16}
+.care .sprig.a{width:190px;right:-30px;top:-30px;transform:rotate(160deg)}
+.care .sprig.b{width:150px;left:-40px;bottom:-40px;transform:rotate(20deg)}
+
+/* Founder */
+.founder{background:var(--parch-2) var(--grain)}
+.founder .wrap{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center}
+.founder .photo{aspect-ratio:4/5;border-radius:999px 999px 18px 18px;max-width:320px;width:100%;background:var(--sage)}
+.founder .photo img{object-fit:cover}
+.founder p{max-width:32em}
+.founder p+p{margin-top:16px}
+.founder .sig{font-family:var(--script);font-size:2.1rem;color:var(--bark);margin-top:20px;line-height:1.1}
+.founder .sig small{display:block;font:600 .92rem var(--body);color:var(--muted)}
+
+/* How to order */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid var(--forest);padding-top:18px}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:2.6rem;color:var(--gold);line-height:1;display:block;margin-bottom:8px}
+.steps h3{font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--forest);margin-bottom:6px}
+.steps p{color:var(--muted);font-size:.97rem}
+
+/* Contact */
+.contact{background:var(--forest-deep) var(--grain);color:#e6edd6;overflow:hidden;position:relative}
+.contact h2{color:#f4efd9}
+.contact .sub{color:#b9ccaa;margin-bottom:28px}
+.contact .meta{margin-top:28px;font-size:.95rem;color:#9db38f}
+.contact .sprig{color:#8cc26b;opacity:.15;width:180px;right:-20px;bottom:-40px;transform:rotate(-20deg)}
+
+footer{background:var(--forest-deep);color:#8fa683;font-size:.88rem;padding:26px 0;border-top:1px solid rgba(255,255,255,.08)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+/* Floating WhatsApp */
+.fab{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:background .2s}
+.fab:hover{background:var(--wa-dark)}
+.fab svg{width:30px;height:30px;fill:#fff}
+
+/* Photo viewer */
+dialog#lb{border:0;padding:0;background:transparent;max-width:min(92vw,880px);max-height:94vh;margin:auto;overflow:visible}
+dialog#lb::backdrop{background:rgba(14,28,17,.86)}
+dialog#lb img{max-width:100%;max-height:80vh;margin-inline:auto;border-radius:14px;object-fit:contain}
+dialog#lb p{color:#f4efd9;text-align:center;font-family:var(--display);font-weight:700;font-size:1.4rem;margin-top:12px}
+.lb-x{position:absolute;top:-14px;right:-6px;width:40px;height:40px;border-radius:50%;border:0;background:var(--parch);color:var(--forest);font-size:1.5rem;line-height:1;cursor:pointer}
+
+@media (max-width:900px){
+  nav.links{display:none}
+  .hero{padding-block:40px 56px}
+  .hero-grid,.about-grid,.explain-grid{grid-template-columns:1fr;gap:36px}
+  .about-photo{max-width:300px;margin-inline:auto}
+  .explain-photo{order:-1;max-width:320px}
+  .frame{max-width:340px}
+  .services{grid-template-columns:1fr}
+  .care .pts{grid-template-columns:1fr}
+  .care .pt:nth-last-child(2){border-bottom:1px solid rgba(223,233,200,.22)}
+  .founder .wrap{grid-template-columns:1fr;gap:28px}
+  .founder .photo{max-width:260px}
+  .steps{grid-template-columns:1fr;gap:28px}
+  section{padding-block:60px}
+  body{font-size:16px}
+}
+@media (max-width:480px){
+  .top .btn span{display:none}
+  .top .btn{padding:11px 13px}
+  .brand{font-size:1.3rem}
+  .grid{gap:38px 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Icon and leaf library -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29Z"/></symbol>
+
+  <symbol id="sprig" viewBox="0 0 200 260">
+    <path d="M100 252C96 190 110 130 90 70C84 50 90 25 100 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <g fill="currentColor">
+      <path d="M0 0C8-14 26-16 40-6C30 9 10 13 0 0Z" transform="translate(98 222) rotate(-30)"/>
+      <path d="M0 0C8-14 26-16 40-6C30 9 10 13 0 0Z" transform="translate(97 196) scale(-1 1) rotate(-28)"/>
+      <path d="M0 0C8-14 26-16 40-6C30 9 10 13 0 0Z" transform="translate(101 166) rotate(-34)"/>
+      <path d="M0 0C8-14 26-16 40-6C30 9 10 13 0 0Z" transform="translate(97 136) scale(-1 1) rotate(-30)"/>
+      <path d="M0 0C8-14 26-16 40-6C30 9 10 13 0 0Z" transform="translate(92 104) rotate(-38)"/>
+      <path d="M0 0C8-14 26-16 40-6C30 9 10 13 0 0Z" transform="translate(89 76) scale(-1 1) rotate(-32)"/>
+      <path d="M0 0C8-14 26-16 40-6C30 9 10 13 0 0Z" transform="translate(93 48) rotate(-44)"/>
+      <path d="M0 0C8-14 26-16 40-6C30 9 10 13 0 0Z" transform="translate(99 22) scale(-1 1) rotate(-50)"/>
+    </g>
+  </symbol>
+
+  <symbol id="i-jar" viewBox="0 0 24 24"><path d="M8 3h8M9 3v2.2M15 3v2.2"/><path d="M7 8.5C7 6.6 8.3 5.2 9 5.2h6c.7 0 2 1.4 2 3.3V18a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3z"/><path d="M12 19v-5"/><path d="M12 14c-2.4 0-3.6-1.4-3.6-3.4 2.4 0 3.6 1.4 3.6 3.4zM12 14c0-2 1.2-3.4 3.6-3.4 0 2-1.2 3.4-3.6 3.4z"/></symbol>
+  <symbol id="i-plant" viewBox="0 0 24 24"><path d="M7 14h10l-1.2 6H8.2z"/><path d="M12 14V8"/><path d="M12 10c-3 0-4.5-1.7-4.5-4 3 0 4.5 1.7 4.5 4zM12 8c0-2.4 1.5-4 4.5-4 0 2.3-1.5 4-4.5 4z"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M12 9v11M4 13h16"/><path d="M12 9C10 9 8 8 8 6.5S9.5 4.5 11 5.5C11.8 6 12 9 12 9zm0 0c2 0 4-1 4-2.5S14.5 4.5 13 5.5c-.8.5-1 3.5-1 3.5z"/></symbol>
+  <symbol id="i-custom" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19z"/><path d="M14.5 6.5l3 3"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.6"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6L7 7M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4"/><path d="M4 4l16 16"/></symbol>
+  <symbol id="i-spray" viewBox="0 0 24 24"><path d="M8 9h6v11a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/><path d="M9 9V6h4v3M13 6h2.5M18 5l1.5-.8M18 7.5h2M18 10l1.5.8"/></symbol>
+  <symbol id="i-fog" viewBox="0 0 24 24"><path d="M7 4h10M8 4v2M16 4v2"/><path d="M7 7h10v10a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3z"/><path d="M10 10.5v1M14 10.5v1M12 13v1"/></symbol>
+  <symbol id="i-temp" viewBox="0 0 24 24"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 8v8"/></symbol>
+  <symbol id="i-tidy" viewBox="0 0 24 24"><path d="M5 20c0-8 4-13 13-14 0 8-4 13-13 14z"/><path d="M5 20L13 12"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7"/><path d="M6 10v10h12V10"/><path d="M12 17c-2 0-3-1-3-2.8 2 0 3 1 3 2.8zm0 0c0-1.8 1-2.8 3-2.8 0 1.8-1 2.8-3 2.8z"/></symbol>
+  <symbol id="i-cycle" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-13.5-5.8L4 8.5"/><path d="M4 4v4.5h4.5"/><path d="M4 12a8 8 0 0 0 13.5 5.8L20 15.5"/><path d="M20 20v-4.5h-4.5"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 4l8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4M4 16l8 4 8-4"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V16a11 11 0 0 1 22 0v11z"/><path d="M16 25v-7"/><path d="M16 18c-3 0-4.5-1.7-4.5-4 3 0 4.5 1.7 4.5 4zM16 16c0-2.4 1.5-4 4.5-4 0 2.3-1.5 4-4.5 4z"/></svg>
+      The Glass Garden
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#shop">Terrariums</a>
+      <a href="#care">Care guide</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+      <span>Chat on WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <svg class="sprig a" viewBox="0 0 200 260" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="sprig b" viewBox="0 0 200 260" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Living art and botanical sculptures</h1>
+      <p class="lead">Handcrafted terrariums: tiny forests, fairy gardens and succulent landscapes grown in glass, delivered to your door.</p>
+      <div class="cta">
+        <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+          Order on WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#shop">See all terrariums</a>
+      </div>
+      <p class="signoff">A little green. A lot of life.</p>
+    </div>
+    <div class="frame">
+      <div class="hero-photo slot" data-id="banner" data-alt="Handmade terrariums in glass jars on a wooden shelf in a garden"></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid about">
+    <div class="about-photo slot" data-id="studio-jar" data-alt="A glass terrarium with ferns, moss and a pink-leaved plant under a cork lid"></div>
+    <div>
+      <h2>Small worlds, made by hand</h2>
+      <p class="intro">The Glass Garden is a studio for living art. Every terrarium is built by hand, layer by layer, with real moss, plants, stones and wood, so each one is a little different from the next.</p>
+      <div class="services">
+        <div class="svc"><span class="ico"><svg aria-hidden="true"><use href="#i-jar"/></svg></span><div><h3>Terrariums</h3><p>Forests, fairy gardens and succulent landscapes, sealed in glass.</p></div></div>
+        <div class="svc"><span class="ico"><svg aria-hidden="true"><use href="#i-plant"/></svg></span><div><h3>Plant gifts</h3><p>A living gift that stays green long after the day is over.</p></div></div>
+        <div class="svc"><span class="ico"><svg aria-hidden="true"><use href="#i-gift"/></svg></span><div><h3>Gifts for every occasion</h3><p>Thoughtful gifts for family, friends, colleagues and clients.</p></div></div>
+        <div class="svc"><span class="ico"><svg aria-hidden="true"><use href="#i-custom"/></svg></span><div><h3>Made just for you</h3><p>Share an idea or a theme and we’ll design a terrarium around it.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div class="shop-head">
+      <div>
+        <h2>Our terrariums</h2>
+        <p class="sub">Tap a photo to see it in full. Tap “Order” and we’ll get a WhatsApp message with its name already filled in.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter terrariums">
+        <button class="chip" data-f="all" aria-pressed="true">All</button>
+        <button class="chip" data-f="fairy" aria-pressed="false">Fairy and woodland</button>
+        <button class="chip" data-f="succulent" aria-pressed="false">Succulents</button>
+        <button class="chip" data-f="tropical" aria-pressed="false">Tropical and mountain</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="explain" id="closed">
+  <div class="wrap explain-grid">
+    <div>
+      <h2>What is a closed terrarium?</h2>
+      <p class="sub">A small garden sealed in glass that mostly looks after itself.</p>
+      <div class="pts">
+        <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-cycle"/></svg></span><div><h3>A garden that recycles</h3><p>The sealed glass reuses its own water and air.</p></div></div>
+        <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-fog"/></svg></span><div><h3>How it works</h3><p>Moisture rises, settles on the glass and trickles back down to water the plants again.</p></div></div>
+        <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-layers"/></svg></span><div><h3>Built in layers</h3><p>Pebbles for drainage, then soil, moss and tropical plants, all working together.</p></div></div>
+        <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-home"/></svg></span><div><h3>Why people love them</h3><p>Very little upkeep, and a piece of nature on your desk or shelf.</p></div></div>
+      </div>
+    </div>
+    <div class="explain-photo slot" data-id="closed-terrarium" data-alt="A closed glass terrarium with moss, ferns and a pink-leaved plant on a wooden slice"></div>
+  </div>
+</section>
+
+<section class="care" id="care">
+  <svg class="sprig a" viewBox="0 0 200 260" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="sprig b" viewBox="0 0 200 260" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="wrap">
+    <h2>Caring for your terrarium</h2>
+    <p class="sub">A few simple habits keep your little garden green and happy.</p>
+    <div class="pts">
+      <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-sun"/></svg></span><div><h3>Light</h3><p>Bright, indirect sunlight only. Keep it out of direct sun.</p></div></div>
+      <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-spray"/></svg></span><div><h3>Water</h3><p>Water sparingly and avoid overwatering. Mist only when there is no condensation and the soil is dry. Use RO or distilled water.</p></div></div>
+      <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-fog"/></svg></span><div><h3>Fog on the glass</h3><p>Lots of condensation? Open the lid for a few hours. If it is heavily foggy, leave it open for 2 to 3 hours.</p></div></div>
+      <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-temp"/></svg></span><div><h3>Temperature</h3><p>18°C to 28°C. Keep it away from AC vents and heat.</p></div></div>
+      <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-tidy"/></svg></span><div><h3>Tidying up</h3><p>Remove dead and fallen leaves, trim yellow ones and keep the glass clean. Don’t open it often. No fertilizer for 6 to 8 months.</p></div></div>
+      <div class="pt"><span class="ico"><svg aria-hidden="true"><use href="#i-home"/></svg></span><div><h3>Where to place it</h3><p>Keep it indoors, away from direct sun and AC vents. Avoid dark corners.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="founder" id="founder">
+  <div class="wrap">
+    <div class="photo slot" data-id="founder" data-alt="Manvendra Singh, founder of The Glass Garden"></div>
+    <div>
+      <h2>Meet the founder</h2>
+      <p>Hi, I’m Manvendra Singh, the founder of The Glass Garden. I love turning moss, stones and tiny plants into little worlds you can keep on your desk or shelf.</p>
+      <p>Message me on WhatsApp for a terrarium you’ve seen here, or tell me what you have in mind and we’ll plan it together.</p>
+      <p class="sig">Manvendra Singh<small>Founder, The Glass Garden</small></p>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <h2>How to order</h2>
+    <p class="sub">No checkout, no sign-up. Just a chat.</p>
+    <ol class="steps">
+      <li><h3>Choose your terrarium</h3><p>Browse the collection and pick the one you love.</p></li>
+      <li><h3>Message us on WhatsApp</h3><p>Tap the order button. Your message is ready to send. Ask us about price, size or availability.</p></li>
+      <li><h3>We deliver it to you</h3><p>Share your delivery address and we’ll arrange delivery to your door.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <svg class="sprig" viewBox="0 0 200 260" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="wrap">
+    <h2>Questions or a custom piece?</h2>
+    <p class="sub">Want a different theme, a gift, or a terrarium for an occasion? Message us and we’ll talk it through.</p>
+    <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+      Message us on WhatsApp
+    </a>
+    <p class="meta">WhatsApp: <a href="#" class="wa-link" target="_blank" rel="noopener" id="numtext"></a> &nbsp;·&nbsp; Founder: Manvendra Singh</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> The Glass Garden. Living art and botanical sculptures.</span>
+    <span>Orders on WhatsApp. Delivered to your door.</span>
+  </div>
+</footer>
+
+<a class="fab wa-link" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+</a>
+
+<dialog id="lb" aria-label="Terrarium photo">
+  <button class="lb-x" aria-label="Close photo">×</button>
+  <img alt="">
+  <p></p>
+</dialog>
+
+<script>
+/* ============ EDIT THESE ============ */
+var WHATSAPP = "919044457715";           // country code + number, no + or spaces
+var DISPLAY_NUMBER = "+91 90444 57715";
+/* Photos live in the "images" folder:
+   1.jpg ... 17.jpg (terrariums), founder.jpg, banner.jpg, studio-jar.jpg, closed-terrarium.jpg
+   .jpeg, .png and .webp also work.
+   Add a price by filling in "price", e.g. price: "₹1,499". Leave empty to show "Price on WhatsApp". */
+var PRODUCTS = [
+  {id:1,  cat:"fairy",     price:"", name:"The Enchanted Woodland", desc:"A magical miniature forest featuring lush green moss, vibrant foliage, a charming stone hideaway and an adorable bunny nestled in nature. A little world of greenery and imagination, beautifully captured in a glass jar to bring a touch of woodland magic into your home."},
+  {id:2,  cat:"fairy",     price:"", name:"The Enchanted Deer Forest", desc:"A magical woodland retreat featuring a charming little deer, lush moss, miniature greenery and a majestic natural rock formation, beautifully recreated in a glass jar."},
+  {id:3,  cat:"fairy",     price:"", name:"The Whimsical Garden", desc:"A playful miniature garden featuring a charming cottage, lush moss, colourful foliage and a sparkling blue pebble stream, complete with adorable googly eyes for a touch of fun and fantasy."},
+  {id:4,  cat:"fairy",     price:"", name:"The Secret Garden Retreat", desc:"A charming miniature countryside garden featuring a rustic wooden bridge, a tiny wishing well, lush moss and beautiful foliage, nestled in an elegant glass bowl."},
+  {id:5,  cat:"succulent", price:"", name:"The Golden Oasis", desc:"An elegant succulent garden featuring beautiful rosette succulents, natural stones and delicate pebble accents, beautifully displayed in a luxurious geometric golden glass terrarium."},
+  {id:6,  cat:"succulent", price:"", name:"The Divine Serenity", desc:"A sacred miniature succulent garden featuring a beautiful Shiva idol, vibrant succulents, natural stones and delicate pebble accents, nestled in an elegant handcrafted geometric glass lantern."},
+  {id:7,  cat:"succulent", price:"", name:"The Emerald Crown", desc:"A stunning succulent arrangement featuring a statement rosette Echeveria, vibrant green succulents and colourful pebble accents, beautifully presented in a luxurious golden geometric glass terrarium."},
+  {id:8,  cat:"fairy",     price:"", name:"The Enchanted Fairy Glen", desc:"A magical miniature woodland featuring a moss-covered landscape, a charming fairy cottage, a tiny red mushroom and a sparkling blue pebble stream, creating a whimsical forest escape in glass."},
+  {id:9,  cat:"succulent", price:"", name:"The Golden Oasis II", desc:"An elegant succulent garden featuring beautiful rosette succulents, natural stones and delicate pebble accents, beautifully displayed in a luxurious geometric golden glass terrarium."},
+  {id:10, cat:"tropical",  price:"", name:"The Enchanted Rainforest", desc:"A lush miniature tropical paradise featuring vibrant foliage, velvety moss, natural driftwood and a winding pebble pathway, beautifully designed to bring the magic of a rainforest into your home."},
+  {id:11, cat:"tropical",  price:"", name:"The Mystic Mountain Trail", desc:"A captivating miniature landscape featuring dramatic volcanic rocks, lush green moss, vibrant foliage and a winding white pebble pathway, beautifully enclosed in a glass jar with a natural stone lid."},
+  {id:12, cat:"tropical",  price:"", name:"The Emerald Sanctuary", desc:"A refreshing miniature tropical retreat featuring lush green foliage, velvety moss, delicate white-veined leaves and natural stone accents, beautifully layered in an elegant glass jar with a cork lid."},
+  {id:13, cat:"fairy",     price:"", name:"The Enchanted Garden Café", desc:"A whimsical miniature garden featuring a charming rustic table and chairs, colourful floral accents, lush greenery and a delightful mushroom, creating a magical little café nestled in nature."},
+  {id:14, cat:"tropical",  price:"", name:"The Mystic Mountain Haven", desc:"A captivating miniature woodland featuring a dramatic volcanic rock formation, lush moss-covered greenery, tiny stone pillars and a charming red mushroom, creating a magical mountain retreat in glass."},
+  {id:15, cat:"tropical",  price:"", name:"The Mystic Temple Garden", desc:"A magical miniature landscape featuring a charming red temple, a tiny stone shrine, natural rock formations, lush moss and vibrant tropical foliage, inspired by the serenity of a mystical mountain sanctuary."},
+  {id:16, cat:"fairy",     price:"", name:"The Fairyland Hideaway", desc:"A magical miniature woodland featuring a charming fairy cottage, a moss-covered stone bridge, natural rock formations and a winding white pebble pathway, creating a dreamy little escape into nature."},
+  {id:17, cat:"tropical",  price:"", name:"The Blue Lagoon", desc:"A serene miniature tropical escape featuring lush greenery, natural stones and a sparkling blue pebble stream, beautifully crafted inside a glass jar."}
+];
+/* ============ END EDIT ============ */
+
+function waLink(text){ return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(text); }
+var GENERIC = "Hi The Glass Garden! I have a question about your terrariums.";
+
+var PH = '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 14h24v6H20z" fill="#1d4a2b"/><path d="M16 22q0-4 4-4h24q4 0 4 4v26q0 8-8 8H24q-8 0-8-8z" fill="none" stroke="#1d4a2b" stroke-width="3"/><path d="M18 46q10-10 28-2v4q0 6-6 6H24q-6 0-6-6z" fill="#1d4a2b" opacity=".5"/></svg><span>Photo coming soon</span>';
+var EXT = ["jpg","jpeg","png","webp","JPG","JPEG","PNG","WEBP"];
+var DIRS = ["images/","Images/",""];
+function candidates(id){
+  var out = [];
+  DIRS.forEach(function(d){ EXT.forEach(function(e){ out.push(d + id + "." + e); }); });
+  return out;
+}
+
+/* Fills a box with images/<id>.<ext>; shows a placeholder until a photo is found. */
+function fillSlot(box, id, alt, onLoaded){
+  var ph = document.createElement("div");
+  ph.className = "ph"; ph.innerHTML = PH;
+  box.appendChild(ph);
+  var list = candidates(id), i = 0, img = new Image();
+  img.alt = alt;
+  img.decoding = "async";
+  img.onload = function(){ ph.remove(); box.appendChild(img); if(onLoaded) onLoaded(img); };
+  img.onerror = function(){ i++; if(i < list.length){ img.src = list[i]; } };
+  img.src = list[0];
+}
+
+/* Photo viewer */
+var lb = document.getElementById("lb"), lbImg = lb.querySelector("img"), lbCap = lb.querySelector("p");
+lb.addEventListener("click", function(){ lb.close(); });
+function openViewer(src, name){ lbImg.src = src; lbImg.alt = name; lbCap.textContent = name; lb.showModal(); }
+
+/* Static photo slots (banner, founder, section images) */
+document.querySelectorAll(".slot").forEach(function(box){
+  fillSlot(box, box.dataset.id, box.dataset.alt);
+});
+
+/* Products */
+var grid = document.getElementById("grid");
+PRODUCTS.forEach(function(p){
+  var el = document.createElement("article");
+  el.className = "item"; el.dataset.cat = p.cat;
+
+  var box = document.createElement("div");
+  box.className = "photo";
+  fillSlot(box, p.id, p.name + " terrarium", function(img){
+    box.style.setProperty("--bg", 'url("' + img.src + '")');
+    box.classList.add("zoom");
+    box.tabIndex = 0;
+    box.setAttribute("role", "button");
+    box.setAttribute("aria-label", "View " + p.name + " photo in full");
+    box.addEventListener("click", function(){ openViewer(img.src, p.name); });
+    box.addEventListener("keydown", function(e){ if(e.key === "Enter" || e.key === " "){ e.preventDefault(); openViewer(img.src, p.name); } });
+  });
+  el.appendChild(box);
+
+  var h = document.createElement("h3"); h.textContent = p.name; el.appendChild(h);
+  var d = document.createElement("p"); d.textContent = p.desc; el.appendChild(d);
+  var row = document.createElement("div"); row.className = "row";
+  var pr = document.createElement("span"); pr.className = "price"; pr.textContent = p.price || "Price on WhatsApp"; row.appendChild(pr);
+  var a = document.createElement("a");
+  a.className = "btn btn-wa"; a.target = "_blank"; a.rel = "noopener";
+  a.href = waLink("Hi The Glass Garden! I’d like to order “" + p.name + "”. Could you share the price and availability?");
+  a.setAttribute("aria-label", "Order " + p.name + " on WhatsApp");
+  a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Order';
+  row.appendChild(a); el.appendChild(row);
+  grid.appendChild(el);
+});
+
+document.querySelectorAll(".chip").forEach(function(c){
+  c.addEventListener("click", function(){
+    document.querySelectorAll(".chip").forEach(function(x){ x.setAttribute("aria-pressed", x === c ? "true" : "false"); });
+    var f = c.dataset.f;
+    document.querySelectorAll(".item").forEach(function(it){ it.hidden = !(f === "all" || it.dataset.cat === f); });
+  });
+});
+
+document.querySelectorAll(".wa-link").forEach(function(a){ a.href = waLink(GENERIC); });
+document.getElementById("numtext").textContent = DISPLAY_NUMBER;
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
